@@ -1,13 +1,41 @@
-import './styles.css';
+import {
+  Container,
+  Content,
+  Header,
+  Reset,
+  Score,
+  Time,
+} from './styles';
 
 export function Home() {
   return (
-    <div className="box-container">
-      <h1>Adivinhe a cor</h1>
+    <Container>
+      <Content>
+        <h1>Adivinhe a cor</h1>
 
-      <header>
-        <div className="remaing-time"></div>
-      </header>
-    </div>
+        <Header>
+          <Time>
+            <span>Tempo</span>
+            <span className="number">17</span>
+          </Time>
+
+          <Reset className="restart-box">Resetar</Reset>
+
+          <Score>
+            <div>
+              <span className="text">
+                Pontuação<br></br>total
+              </span>
+              <span className="number">13</span>
+            </div>
+
+            <div className="score-total">
+              <span className="text">Pontuação</span>
+              <span className="number">13</span>
+            </div>
+          </Score>
+        </Header>
+      </Content>
+    </Container>
   );
 }
